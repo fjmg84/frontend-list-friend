@@ -1,0 +1,36 @@
+img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 14px;
+  top: calc(50% - 60px / 2);
+}
+
+.rectangle1 {
+  position: absolute;
+  border-radius: 4px;
+}
+
+.availability {
+  border-radius: 5px;
+}
+
+.eclipse {
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  top: 11px;
+  border: 2px solid #fff;
+}
+
+.available {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #16ba44;
+}
+
+.not-available {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #b1b9db;
+}

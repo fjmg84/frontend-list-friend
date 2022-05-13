@@ -1,0 +1,74 @@
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 93px;
+  height: 40px;
+  right: 24px;
+  top: calc(50% - 40px / 2);
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 8px;
+
+  width: 91px;
+  height: 40px;
+
+  /* Primary / Blue50 */
+
+  background: #2e57fa;
+  /* Primary/Blue60 */
+
+  border: 1px solid #0637f9;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  color: white;
+}
+
+button:hover {
+  /* Primary/Blue60 */
+
+  background: #0637f9;
+  /* Primary/Blue60 */
+
+  border: 1px solid #0637f9;
+  border-radius: 4px;
+}
+
+button:active {
+  /* Primary/Blue70 */
+
+  background: #052dcc;
+  /* Primary/Blue60 */
+
+  border: 1px solid #0637f9;
+  border-radius: 4px;
+}
+
+button:disabled {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  /* Grayspace/Layout/Gray5 */
+
+  background: #f8f8fa;
+  /* Grayspace/Layout/Gray30 */
+
+  border: 1px solid #d0d3da;
+  border-radius: 4px;
+}

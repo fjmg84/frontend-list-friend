@@ -1,11 +1,12 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-
-/* import Login from "../components/Login.jsx"; */
+import { Index } from "../components/Index";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-      <Routes>{/* <Route path="/" element={<Login />}></Route> */}</Routes>
+      <Routes>
+        <Route path="/" element={<Index />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 };

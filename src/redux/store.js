@@ -1,12 +1,10 @@
 import { createStore, combineReducers } from "redux";
-/* import { authReducer } from "../reducers/authReducer";
-import { channelReducer } from "../reducers/channelReducer";
-import { messageReducer } from "../reducers/messageReducer"; */
+import { friendsReducer } from "../reducer/friends";
+import { errorsReducer } from "../reducer/errors";
 
 const rootReducers = combineReducers({
-  /*   authReducer,
-  channelReducer,
-  messageReducer, */
+  friendsReducer,
+  errorsReducer,
 });
 
 export const store = createStore(
