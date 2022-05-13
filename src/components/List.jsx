@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import image from "../photo.jpg";
 
 export const List = () => {
-  const friends = useSelector((state) => state.friendsReducer)[0] || [];
+  const friends = useSelector((state) => state.friendsReducer) || [];
 
   return (
     <ul>
@@ -27,9 +27,7 @@ export const List = () => {
                   </div>
                 </div>
                 {friend.available ? (
-                  <button onClick={() => console.log(friend.id)}>
-                    Details
-                  </button>
+                  <button onClick={() => friend.id}>Details</button>
                 ) : (
                   <button disabled>Details</button>
                 )}

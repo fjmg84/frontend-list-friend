@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing component <List/> snapshot component <List/> 1`] = `<ul />`;
