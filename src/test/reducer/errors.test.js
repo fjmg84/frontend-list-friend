@@ -1,5 +1,5 @@
-import { errorsReducer } from "../reducer/errors";
-import { TYPES } from "../redux/types";
+import { errorsReducer } from "../../reducer/errors";
+import { TYPES } from "../../redux/types";
 describe("testing errors Reducer", () => {
   test("return error", () => {
     let initial = {

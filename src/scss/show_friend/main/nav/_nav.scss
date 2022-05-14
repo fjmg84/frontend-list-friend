@@ -1,0 +1,50 @@
+@import "./tabs/tab1";
+@import "./tabs/tab2";
+
+.nav {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 140px;
+  height: 32px;
+  position: relative;
+  top: 300px;
+  margin-top: 10px;
+
+  & .inactive {
+    width: 54px;
+    height: 24px;
+
+    /* Headline/H300 (medium) */
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5c5f6b;
+  }
+
+  & .line {
+    width: 65px;
+    height: 0px;
+
+    border: 2px solid #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+}

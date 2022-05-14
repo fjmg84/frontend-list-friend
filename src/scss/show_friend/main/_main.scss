@@ -1,0 +1,16 @@
+@import "./nav/nav";
+@import "./section/section";
+
+.main {
+  position: relative;
+  top: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 488px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgb(204 208 223 / 50%);
+  border-radius: 8px;
+}

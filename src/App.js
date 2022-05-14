@@ -6,9 +6,7 @@ import "./css/index.css";
 function App() {
   return (
     <Provider store={store}>
-      <div className="body">
-        <AppRoutes />
-      </div>
+      <AppRoutes />
     </Provider>
   );
 }

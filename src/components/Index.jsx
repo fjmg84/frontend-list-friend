@@ -28,10 +28,12 @@ export const Index = () => {
 
   return (
     <>
-      <h1>Friends</h1>
-      {status && <div className="error">{msg}</div>}
-      <div className="box">
-        <List />
+      <div className="body">
+        <h1>Friends</h1>
+        {status && <div className="error">{msg}</div>}
+        <div className="box">
+          <List />
+        </div>
       </div>
     </>
   );

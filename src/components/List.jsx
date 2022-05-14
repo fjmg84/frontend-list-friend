@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import image from "../photo.jpg";
 
 export const List = () => {
   const friends = useSelector((state) => state.friendsReducer) || [];
+  const navigate = useNavigate();
 
   return (
     <ul>
@@ -12,7 +14,11 @@ export const List = () => {
           <li key={friend.id}>
             <div className="row">
               <div className="card">
-                <img src={image} alt={friend.img} className="rectangle1" />
+                <img
+                  src={image}
+                  alt={friend.img}
+                  className="rectangle1 avatar"
+                />
                 <span
                   className={`availability eclipse ${
                     friend.available ? "available" : "not-available"
@@ -27,7 +33,9 @@ export const List = () => {
                   </div>
                 </div>
                 {friend.available ? (
-                  <button onClick={() => friend.id}>Details</button>
+                  <button onClick={() => navigate(`./show/${friend.id}`)}>
+                    Details
+                  </button>
                 ) : (
                   <button disabled>Details</button>
                 )}
