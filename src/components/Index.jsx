@@ -1,28 +1,24 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFriends } from "../redux/actions/friends";
+import { setAlert } from "../redux/actions/alerts";
 import { TYPES } from "../redux/types";
-
 import { List } from "./List";
 
 export const Index = () => {
   const dispatch = useDispatch();
-  const { status, msg } = useSelector((state) => state.errorsReducer);
+  const { status, msg } = useSelector((state) => state.alertsReducer);
 
   useEffect(() => {
+    dispatch(setAlert(true, "Loading friends..."));
     getFriends()
       .then((friends) => {
         dispatch({ type: TYPES.LOAD, payload: friends });
+        dispatch(setAlert(false, undefined));
       })
       .catch((err) => {
         console.log(err);
-        dispatch({
-          type: TYPES.ERROR_ACTIVE,
-          payload: {
-            status: true,
-            msg: "Up!! Sorry. Not loading Friends :(",
-          },
-        });
+        dispatch(setAlert(true, "Up!! Sorry. Not loading Friends :("));
       });
   }, [dispatch]);
 

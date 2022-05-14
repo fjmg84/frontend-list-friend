@@ -1,4 +1,4 @@
 export const TYPES = {
   LOAD: "load/friends",
-  ERROR_ACTIVE: "error/active",
+  CREATE_ALERT: "create/alert",
 };

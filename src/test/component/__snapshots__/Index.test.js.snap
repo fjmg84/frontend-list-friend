@@ -8,6 +8,11 @@ exports[`testing component <Index/> mount component <Index/> 1`] = `
     Friends
   </h1>
   <div
+    className="error"
+  >
+    Loading friends...
+  </div>
+  <div
     className="box"
   >
     <ul />
@@ -20,7 +25,7 @@ exports[`testing component <Index/> shallow component <Index/> 1`] = `
   location={
     Object {
       "hash": "",
-      "key": "bauktvgr",
+      "key": "p24t6c9p",
       "pathname": "/",
       "search": "",
       "state": null,
@@ -39,7 +44,7 @@ exports[`testing component <Index/> shallow component <Index/> 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "bauktvgr",
+        "key": "p24t6c9p",
         "pathname": "/",
         "search": "",
         "state": null,

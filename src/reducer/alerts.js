@@ -5,9 +5,9 @@ const initialState = {
   msg: undefined,
 };
 
-export const errorsReducer = (state = initialState, action) => {
+export const alertsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TYPES.ERROR_ACTIVE:
+    case TYPES.CREATE_ALERT:
       return {
         status: action.payload.status,
         msg: action.payload.msg,
