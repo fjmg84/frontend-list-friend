@@ -36,13 +36,12 @@ export const List = () => {
                     <span>{friend.status}</span>
                   </div>
                 </div>
-                {friend.available ? (
-                  <button onClick={() => handleClick(friend.id)}>
-                    Details
-                  </button>
-                ) : (
-                  <button disabled>Details</button>
-                )}
+                <button
+                  onClick={() => handleClick(friend.id)}
+                  disabled={!friend.available}
+                >
+                  Details
+                </button>
               </div>
             </div>
           </li>
