@@ -4,14 +4,16 @@ import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import { store } from "../../redux/store";
 import { TYPES } from "../../redux/types";
+import { MemoryRouter } from "react-router-dom";
 
 describe("testing component <List/>", () => {
   const wrapper = mount(
-    <Provider store={store}>
-      <List />
-    </Provider>
+    <MemoryRouter>
+      <Provider store={store}>
+        <List />
+      </Provider>
+    </MemoryRouter>
   );
-
   test("snapshot component <List/>", () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -34,9 +36,11 @@ describe("testing component <List/>", () => {
     });
 
     const wrapper = mount(
-      <Provider store={store}>
-        <List />
-      </Provider>
+      <MemoryRouter>
+        <Provider store={store}>
+          <List />
+        </Provider>
+      </MemoryRouter>
     );
 
     const btn = wrapper.find("li").at(0);

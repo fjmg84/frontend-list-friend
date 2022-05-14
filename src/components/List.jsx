@@ -7,6 +7,10 @@ export const List = () => {
   const friends = useSelector((state) => state.friendsReducer) || [];
   const navigate = useNavigate();
 
+  const handleClick = (id) => {
+    navigate(`./show/${id}`);
+  };
+
   return (
     <ul>
       {friends.map((friend) => {
@@ -33,7 +37,7 @@ export const List = () => {
                   </div>
                 </div>
                 {friend.available ? (
-                  <button onClick={() => navigate(`./show/${friend.id}`)}>
+                  <button onClick={() => handleClick(friend.id)}>
                     Details
                   </button>
                 ) : (
