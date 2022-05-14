@@ -9,17 +9,11 @@ describe("Testing Friend Action", () => {
     done();
   });
 
-  test("return new store. add new friend to store", () => {
-    const newFriends = {
-      id: 7,
-      img: "https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg",
-      first_name: "Jeremy",
-      last_name: "Davis",
-      status: "At work...",
-      available: false,
-    };
-    const action = { type: TYPES.LOAD, payload: newFriends };
-    const store = friendsReducer(data, action);
-    expect(store.length).toEqual(7);
+  test("create store with list of friends", () => {
+    const initialState = {};
+    const action = { type: TYPES.LOAD, payload: data };
+    const store = friendsReducer(initialState, action);
+
+    expect(store.length).toEqual(data.length);
   });
 });
