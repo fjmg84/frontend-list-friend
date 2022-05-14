@@ -25,7 +25,7 @@ exports[`testing component <Index/> shallow component <Index/> 1`] = `
   location={
     Object {
       "hash": "",
-      "key": "p24t6c9p",
+      "key": "ptyhvum4",
       "pathname": "/",
       "search": "",
       "state": null,
@@ -44,7 +44,7 @@ exports[`testing component <Index/> shallow component <Index/> 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "p24t6c9p",
+        "key": "ptyhvum4",
         "pathname": "/",
         "search": "",
         "state": null,
