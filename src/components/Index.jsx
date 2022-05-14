@@ -23,14 +23,17 @@ export const Index = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="box">
       <div className="body">
-        <h1>Friends</h1>
-        {status && <div className="error">{msg}</div>}
-        <div className="box">
+        <div className="header">
+          <h1>Friends</h1>
+          {status && <div className="error">{msg}</div>}
+        </div>
+
+        <div className="main">
           <List />
         </div>
       </div>
-    </>
+    </div>
   );
 };

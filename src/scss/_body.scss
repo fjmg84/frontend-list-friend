@@ -1,68 +1,43 @@
+.box {
+  /* background-color: #ef4444; */
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column grow;
+  align-items: stretch;
+  height: 100%;
+}
+
 .body {
+  flex-grow: 1;
   background-color: #fff;
   padding: 5%;
-  margin: 5% 15%;
+  margin: 2% 10%;
   border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  overflow-y: auto;
   height: 100%;
-  /* width: 50%; */
 
   & h1 {
-    width: 96px;
-    height: 24px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 24px;
-    /* identical to box height, or 92% */
-
-    display: flex;
-    align-items: center;
-
     color: #b1b9db;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
-
-  & .error {
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #ef4444;
-    width: 400px;
-    border-radius: 121px;
-    color: white;
   }
 }
-
-.availability {
-  border-radius: 5px;
+.error {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ef4444;
+  width: 400px;
+  border-radius: 121px;
+  color: white;
 }
 
-.eclipse {
-  width: 12px;
-  height: 12px;
-  left: 10px;
-  top: 11px;
-  border: 2px solid #fff;
-}
-
-.available {
-  box-sizing: border-box;
-  position: absolute;
-  background-color: #16ba44;
-}
-
-.not-available {
-  box-sizing: border-box;
-  position: absolute;
-  background-color: #b1b9db;
+@media screen and (max-width: 768px) {
+  .body {
+    margin: 15% 5%;
+  }
 }

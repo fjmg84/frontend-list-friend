@@ -1,0 +1,60 @@
+@import "./nav/nav";
+@import "./section/section";
+
+.show-card {
+  position: relative;
+  height: 100%;
+  margin: 2%;
+  padding: 8px;
+}
+.show-card-content {
+  position: relative;
+  top: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-card-header-status {
+  align-items: flex-start;
+  padding: 0px 8px;
+  gap: 10px;
+  height: 24px;
+  border: 1px solid #b1b9db;
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  & span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #b1b9db;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}
+
+.show-card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  position: absolute;
+  top: 0px;
+}
+
+.show-card-box-data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  height: 100%;
+  top: 50px;
+}

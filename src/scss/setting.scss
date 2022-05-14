@@ -1,10 +1,16 @@
 @import "./body";
-@import "./list_friends/index";
-@import "./show_friend/index";
+@import "./main";
+@import "./status";
+@import "./list_friends/card";
+@import "./list_friends/button";
+@import "./data_friend/icons";
+@import "./data_friend/show";
+
+/* @import "./list_friends/index";
+@import "./show_friend/index"; */
 /* @import "./test.scss"; */
-
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"); */
-
 html {
   background-color: rgb(241 245 249);
+  margin: 5% 5%;
 }

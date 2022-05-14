@@ -1,5 +1,5 @@
 import { TYPES } from "../redux/types";
-const initialState = [];
+const initialState = JSON.parse(window.sessionStorage.getItem("friends")) || [];
 
 export const friendsReducer = (state = initialState, action) => {
   switch (action.type) {

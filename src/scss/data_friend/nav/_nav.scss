@@ -3,7 +3,6 @@
 
 .nav {
   /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -12,7 +11,6 @@
   width: 140px;
   height: 32px;
   position: relative;
-  top: 300px;
   margin-top: 10px;
 
   & .inactive {
