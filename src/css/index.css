@@ -297,6 +297,9 @@ img.medium {
   position: relative;
   margin-top: 10px;
 }
+.nav span {
+  cursor: pointer;
+}
 .nav .inactive {
   width: 54px;
   height: 24px;

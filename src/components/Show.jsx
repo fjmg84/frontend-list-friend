@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { findOneFriend } from "../redux/actions/friends";
 import { setAlert } from "../redux/actions/alerts";
 import img from "../photo.jpg";
+import { Info } from "./infoFriend/Info";
+import { Photos } from "./infoFriend/Photos";
 
 export const Show = () => {
   let { id } = useParams();
@@ -34,66 +36,6 @@ export const Show = () => {
 
   const handleView = () => {
     setView(!view);
-  };
-
-  const info = () => {
-    return (
-      <>
-        <div className="article col">
-          <p className="title">Bio:</p>
-          <div className="text">{friend.bio}</div>
-        </div>
-        <div className="divider"></div>
-
-        <div className="article row">
-          <p className="title">Phone:</p>
-          <div className="">{friend.phone}</div>
-        </div>
-        <div className="divider"></div>
-
-        <div>
-          <div className="article row">
-            <p className="title">Address</p>
-            <div>{friend.address_1}</div>
-          </div>
-
-          <div className="article row">
-            <p className="title">City</p>
-            <div>{friend.city}</div>
-          </div>
-
-          <div className="article row">
-            <p className="title">Zipcode</p>
-            <div>{friend.zipcode}</div>
-          </div>
-
-          <div className="article row">
-            <p className="title">State</p>
-            <div>{friend.state}</div>
-          </div>
-        </div>
-      </>
-    );
-  };
-
-  const photos = () => {
-    return (
-      <div className="article">
-        <div className="gallery">
-          <img src={img} />
-          <img src={img} />
-          <img src={img} />
-
-          <img src={img} />
-          <img src={img} />
-          <img src={img} />
-
-          <img src={img} />
-          <img src={img} />
-          <img src={img} />
-        </div>
-      </div>
-    );
   };
 
   const handleNavegation = () => {
@@ -136,7 +78,13 @@ export const Show = () => {
                   </div>
                 </div>
 
-                <div className="section">{view ? info() : photos()}</div>
+                <div className="section">
+                  {view ? (
+                    <Info friend={friend} />
+                  ) : (
+                    <Photos photos={friend.photos} />
+                  )}
+                </div>
               </div>
             </div>
           </div>
