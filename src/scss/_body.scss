@@ -36,6 +36,17 @@
   color: white;
 }
 
+.loading {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(241 245 249);
+  width: 400px;
+  border-radius: 121px;
+  color: #000;
+}
+
 @media screen and (max-width: 768px) {
   .body {
     margin: 15% 5%;

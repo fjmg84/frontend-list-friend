@@ -1,7 +1,6 @@
 import React from "react";
 
-export const Info = ({ friend }) => {
-  console.log(friend);
+export const Info = ({ friend = {} }) => {
   return (
     <>
       <div className="article col">

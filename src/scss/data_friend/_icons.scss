@@ -1,21 +1,31 @@
-/* button {
-  flex-grow: 1;
-  margin: 10px;
-  width: 64px;
-  height: 64px;
-} */
-
-.arrow {
+.icons {
   margin: 10px;
   padding: 5px;
   position: absolute;
   width: 44px;
   height: 44px;
+}
+
+.close {
+  right: 20px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.arrow {
   left: 20px;
   top: 60px;
   background: #ffffff;
   border-radius: 8px;
 }
+
+.icons-blue {
+  color: #2e57fa;
+}
+.icons-white {
+  color: #ffffff;
+}
+
 .fill {
   width: 24px;
   height: 24px;
@@ -27,7 +37,6 @@
   position: absolute;
   left: 24%;
   top: 24%;
-  background: #2e57fa;
 }
 
 @media screen and (max-width: 768px) {

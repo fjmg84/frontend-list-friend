@@ -3,6 +3,7 @@ import { TYPES } from "../redux/types";
 const initialState = {
   status: false,
   msg: undefined,
+  classAlert: undefined,
 };
 
 export const alertsReducer = (state = initialState, action) => {
@@ -11,6 +12,7 @@ export const alertsReducer = (state = initialState, action) => {
       return {
         status: action.payload.status,
         msg: action.payload.msg,
+        classAlert: action.payload.classAlert,
       };
 
     default:

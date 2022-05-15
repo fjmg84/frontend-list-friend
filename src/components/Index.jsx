@@ -7,10 +7,12 @@ import { List } from "./List";
 
 export const Index = () => {
   const dispatch = useDispatch();
-  const { status, msg } = useSelector((state) => state.alertsReducer);
+  const { status, msg, classAlert } = useSelector(
+    (state) => state.alertsReducer
+  );
 
   useEffect(() => {
-    dispatch(setAlert(true, "Loading friends..."));
+    dispatch(setAlert(true, "Loading friends...", "loading"));
     getFriends()
       .then((friends) => {
         dispatch({ type: TYPES.LOAD, payload: friends });
@@ -18,7 +20,7 @@ export const Index = () => {
       })
       .catch((err) => {
         console.log(err);
-        dispatch(setAlert(true, "Up!! Sorry. Not loading Friends :("));
+        dispatch(setAlert(true, "Up!! Sorry. Not loading Friends :(", "error"));
       });
   }, [dispatch]);
 
@@ -27,7 +29,7 @@ export const Index = () => {
       <div className="body">
         <div className="header">
           <h1>Friends</h1>
-          {status && <div className="error">{msg}</div>}
+          {status && <div className={classAlert}>{msg}</div>}
         </div>
 
         <div className="main">

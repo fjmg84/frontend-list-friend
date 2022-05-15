@@ -7,8 +7,8 @@ export const List = () => {
   const friends = useSelector((state) => state.friendsReducer) || [];
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-    navigate(`./show/${id}`);
+  const handleClick = (id, status) => {
+    navigate(`./show/${id}/${status}`);
   };
   /**
    *
@@ -41,7 +41,7 @@ export const List = () => {
                 <div className="card-actions">
                   <button
                     className="details-button"
-                    onClick={() => handleClick(friend.id)}
+                    onClick={() => handleClick(friend.id, friend.status)}
                     disabled={!friend.available}
                   >
                     Details
