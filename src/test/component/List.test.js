@@ -1,20 +1,20 @@
 import React from "react";
 import { List } from "../../components/List";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 import { Provider } from "react-redux";
 import { store } from "../../redux/store";
 import { TYPES } from "../../redux/types";
 import { MemoryRouter } from "react-router-dom";
 
 describe("testing component <List/>", () => {
-  const wrapper = mount(
-    <MemoryRouter>
-      <Provider store={store}>
-        <List />
-      </Provider>
-    </MemoryRouter>
-  );
-  test("snapshot component <List/>", () => {
+  test("snapshot to component <List/>", () => {
+    const wrapper = shallow(
+      <MemoryRouter>
+        <Provider store={store}>
+          <List />
+        </Provider>
+      </MemoryRouter>
+    );
     expect(wrapper).toMatchSnapshot();
   });
 

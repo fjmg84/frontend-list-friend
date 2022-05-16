@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MdClear } from "react-icons/md";
 
 export const Photos = ({ photos = [] }) => {
+  console.log(photos);
   const [modal, setModal] = useState({
     view: false,
     url: undefined,
@@ -13,7 +14,7 @@ export const Photos = ({ photos = [] }) => {
         <div className="gallery">
           {photos.map((photo, index) => {
             return (
-              <a
+              <button
                 key={index}
                 onClick={() =>
                   setModal({
@@ -23,7 +24,7 @@ export const Photos = ({ photos = [] }) => {
                 }
               >
                 <img src={photo} alt={photo} />
-              </a>
+              </button>
             );
           })}
         </div>

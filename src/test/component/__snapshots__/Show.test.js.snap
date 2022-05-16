@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing component <List/> snapshot to component <List/> 1`] = `
+exports[`testing component <Show/> snapshot to component <Show/> 1`] = `
 <Router
   location={
     Object {
       "hash": "",
-      "key": "a3dyyt9s",
+      "key": "5x9zsih8",
       "pathname": "/",
       "search": "",
       "state": null,
@@ -24,7 +24,7 @@ exports[`testing component <List/> snapshot to component <List/> 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "a3dyyt9s",
+        "key": "5x9zsih8",
         "pathname": "/",
         "search": "",
         "state": null,
@@ -45,7 +45,7 @@ exports[`testing component <List/> snapshot to component <List/> 1`] = `
       }
     }
   >
-    <List />
+    <Show />
   </Provider>
 </Router>
 `;

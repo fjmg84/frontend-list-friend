@@ -1,30 +1,29 @@
 import React from "react";
-import { Index } from "../../components/Index";
-import { mount, shallow } from "enzyme";
-import { Provider } from "react-redux";
-import { store } from "../../redux/store";
 import { MemoryRouter } from "react-router-dom";
+import { mount, shallow, render } from "enzyme";
+import { Provider } from "react-redux";
+import { Index } from "../../components/Index";
+import { store } from "../../redux/store";
+import { getFriends } from "../../redux/actions/friends";
+import data from "../../data.json";
+import { TYPES } from "../../redux/types";
+jest.mock("../../redux/actions/friends");
 
 describe("testing component <Index/>", () => {
-  test("shallow component <Index/>", () => {
-    const wrapper = shallow(
-      <MemoryRouter>
-        <Provider store={store}>
-          <Index />
-        </Provider>
-      </MemoryRouter>
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
+  test("snapshot to component <Index/>", () => {
+    store.dispatch({
+      type: TYPES.LOAD,
+      payload: data,
+    });
 
-  test("mount component <Index/>", () => {
-    const wrapper = mount(
+    const wrapper = render(
       <MemoryRouter>
         <Provider store={store}>
           <Index />
         </Provider>
       </MemoryRouter>
     );
+
     expect(wrapper).toMatchSnapshot();
   });
 });

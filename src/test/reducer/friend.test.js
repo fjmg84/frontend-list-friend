@@ -10,9 +10,8 @@ describe("Testing Friend Action", () => {
   });
 
   test("create store with list of friends", () => {
-    const initialState = {};
     const action = { type: TYPES.LOAD, payload: data };
-    const store = friendsReducer(initialState, action);
+    const store = friendsReducer({}, action);
 
     expect(store.length).toEqual(data.length);
   });

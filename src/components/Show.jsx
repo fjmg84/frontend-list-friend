@@ -4,20 +4,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { findOneFriend } from "../redux/actions/friends";
 import { setAlert } from "../redux/actions/alerts";
+import { Info } from "./Details/Info";
+import { Photos } from "./Details/Photos";
 import img from "../photo.jpg";
-import { Info } from "./infoFriend/Info";
-import { Photos } from "./infoFriend/Photos";
 
 export const Show = () => {
-  let { id, status: statusOfFriend } = useParams();
+  let { id } = useParams();
   const dispatch = useDispatch();
   const { status, msg, classAlert } = useSelector(
     (state) => state.alertsReducer
   );
-
+  const friends = useSelector((state) => state.friendsReducer);
   const [view, setView] = useState(true);
   const [friend, setFriend] = useState({});
-
+  const [statusOfFriend, setStatusOfFriend] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,6 +34,10 @@ export const Show = () => {
         );
       });
   }, [id, dispatch]);
+
+  useEffect(() => {
+    setStatusOfFriend(friends.filter((friend) => friend.id === +id)[0]);
+  }, [id, friends]);
 
   const handleView = () => {
     setView(!view);
@@ -63,10 +67,11 @@ export const Show = () => {
               <img src={img} alt={friend.img} className="medium" />
               <span className="availability eclipse available"></span>
             </div>
+
             <div className="show-card-content">
               <p>{`${friend.first_name} ${friend?.last_name}`}</p>
               <div className="show-card-header-status">
-                <span>{statusOfFriend}</span>
+                <span>{statusOfFriend?.status}</span>
               </div>
 
               <div className="show-card-box-data">
