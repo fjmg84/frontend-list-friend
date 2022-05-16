@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing component <List/> snapshot to component <List/> 1`] = `
+<Router
+  location={
+    Object {
+      "hash": "",
+      "key": "2eg0vili",
+      "pathname": "/",
+      "search": "",
+      "state": null,
+    }
+  }
+  navigationType="POP"
+  navigator={
+    Object {
+      "action": "POP",
+      "back": [Function],
+      "block": [Function],
+      "createHref": [Function],
+      "forward": [Function],
+      "go": [Function],
+      "index": 0,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "2eg0vili",
+        "pathname": "/",
+        "search": "",
+        "state": null,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <List
+      friends={
+        Array [
+          Object {
+            "available": false,
+            "first_name": "Jeremy",
+            "id": 1,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg",
+            "last_name": "Davis",
+            "status": "At work...",
+          },
+          Object {
+            "available": true,
+            "first_name": "Vlad",
+            "id": 2,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg",
+            "last_name": "Baratovich",
+            "status": "Hangout out by the pool",
+          },
+          Object {
+            "available": true,
+            "first_name": "Reese",
+            "id": 3,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg",
+            "last_name": "Samsonite",
+            "status": "At NG-conf!",
+          },
+          Object {
+            "available": false,
+            "first_name": "Edwardo",
+            "id": 4,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/enda/128.jpg",
+            "last_name": "Gonzalez",
+            "status": "Developing something amazing",
+          },
+          Object {
+            "available": false,
+            "first_name": "Jim",
+            "id": 5,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/jm_denis/128.jpg",
+            "last_name": "Denison",
+            "status": "Designing beatiful things",
+          },
+          Object {
+            "available": true,
+            "first_name": "Steph",
+            "id": 6,
+            "img": "https://s3.amazonaws.com/uifaces/faces/twitter/walterstephanie/128.jpg",
+            "last_name": "Walters",
+            "status": "Developing something amazing",
+          },
+        ]
+      }
+    />
+  </Provider>
+</Router>
+`;

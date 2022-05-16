@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardBackspace } from "react-icons/md";
-import { findOneFriend } from "../redux/actions/friends";
-import { setAlert } from "../redux/actions/alerts";
+import { findOneFriend } from "../../redux/actions/friends";
+import { setAlert } from "../../redux/actions/alerts";
 import { Info } from "./Details/Info";
 import { Photos } from "./Details/Photos";
-import img from "../photo.jpg";
+import img from "../../images/photo.jpg";
 
 export const Show = () => {
   let { id } = useParams();
-  console.log(`id: ${id}`);
+
   const dispatch = useDispatch();
   const { status, msg, classAlert } = useSelector(
     (state) => state.alertsReducer
@@ -26,7 +26,6 @@ export const Show = () => {
   useEffect(() => {
     findOneFriend(id)
       .then((friend) => {
-        console.log(friend);
         setFriend(friend);
         dispatch(setAlert(false, undefined));
       })
@@ -42,18 +41,10 @@ export const Show = () => {
       });
   }, [id, dispatch]);
 
-  const handleView = () => {
-    setView(!view);
-  };
-
-  const handleNavegation = () => {
-    navigate("/");
-  };
-
   return (
     <div className="box">
       <div className="icons icons-blue arrow">
-        <span className="fill vector" onClick={() => handleNavegation()}>
+        <span className="fill vector" onClick={() => navigate("/")}>
           <MdKeyboardBackspace size={24} />
         </span>
       </div>
@@ -80,11 +71,11 @@ export const Show = () => {
               <div className="show-card-box-data">
                 <div className="nav">
                   <div className={`tab ${view ? "active" : "inactive"}`}>
-                    <span onClick={() => handleView()}>Info</span>
+                    <span onClick={() => setView(!view)}>Info</span>
                     <span className={`${view ? "line" : ""}`}></span>
                   </div>
                   <div className={`tab ${!view ? "active" : "inactive"}`}>
-                    <span onClick={() => handleView()}>Photos</span>
+                    <span onClick={() => setView(!view)}>Photos</span>
                     <span className={`${!view ? "line" : ""}`}></span>
                   </div>
                 </div>

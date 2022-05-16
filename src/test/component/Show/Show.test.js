@@ -1,15 +1,14 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { render } from "enzyme";
-import { Show } from "../../components/Show";
-import { store } from "../../redux/store";
-import { TYPES } from "../../redux/types";
-import { findOneFriend } from "../../redux/actions/friends";
-import data from "../../data.json";
+import { Show } from "../../../components/Show/Show";
+import { store } from "../../../redux/store";
+import { TYPES } from "../../../redux/types";
+import { findOneFriend } from "../../../redux/actions/friends.js";
+import data from "../../../data/data.json";
 import { waitFor } from "@testing-library/react";
-jest.mock("../../redux/actions/friends");
+jest.mock("../../../redux/actions/friends.js");
 
 describe("testing component <Show/>", () => {
   test("snapshot to component", async () => {

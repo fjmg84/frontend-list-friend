@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getFriends } from "../redux/actions/friends";
-import { setAlert } from "../redux/actions/alerts";
-import { TYPES } from "../redux/types";
+import { getFriends } from "../../redux/actions/friends";
+import { setAlert } from "../../redux/actions/alerts";
+import { TYPES } from "../../redux/types";
 import { List } from "./List";
 
 export const Index = () => {
@@ -10,7 +10,7 @@ export const Index = () => {
   const { status, msg, classAlert } = useSelector(
     (state) => state.alertsReducer
   );
-  const friends = useSelector((state) => state.friendsReducer) || [];
+  const friends = useSelector((state) => state.friendsReducer);
 
   useEffect(() => {
     dispatch(setAlert(true, "Loading friends...", "loading"));
@@ -35,9 +35,7 @@ export const Index = () => {
           {status && <div className={classAlert}>{msg}</div>}
         </div>
 
-        <div className="main">
-          <List friends={friends} />
-        </div>
+        <div className="main">{friends && <List friends={friends} />}</div>
       </div>
     </div>
   );

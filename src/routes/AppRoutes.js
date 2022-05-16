@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Index } from "../components/Index";
-import { Show } from "../components/Show";
+import { Index } from "../components/Home/Index";
+import { Show } from "../components/Show/Show";
 
 const AppRoutes = () => {
   return (

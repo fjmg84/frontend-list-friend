@@ -1,7 +1,7 @@
 import { getFriends, findOneFriend } from "../../redux/actions/friends";
 import { friendsReducer } from "../../reducer/friends";
 import { TYPES } from "../../redux/types";
-import data from "../../data.json";
+import data from "../../data/data.json";
 
 describe("Testing Friend Action", () => {
   test("return an array of object with list of friends", (done) => {

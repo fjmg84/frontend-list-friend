@@ -1,7 +1,7 @@
 import axios from "axios";
 
-/* import data_list from "../../data.json";*/
-import data_user from "../../data_user.json";
+/* import data_list from "../../data/data.json";*/
+import data_user from "../../data/data_user.json";
 
 export const getFriends = async () => {
   let url = "http://private-5bdb3-friendmock.apiary-mock.com/friends";

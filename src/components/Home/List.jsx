@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
-import image from "../photo.jpg";
+import image from "../../images/photo.jpg";
 
 export const List = ({ friends }) => {
   const navigate = useNavigate();

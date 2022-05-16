@@ -2,11 +2,10 @@ import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { render } from "enzyme";
 import { Provider } from "react-redux";
-import { Index } from "../../components/Index";
-import { store } from "../../redux/store";
-import data from "../../data.json";
-import { TYPES } from "../../redux/types";
-
+import { Index } from "../../../components/Home/Index";
+import { store } from "../../../redux/store";
+import data from "../../../data/data.json";
+import { TYPES } from "../../../redux/types";
 
 describe("testing component <Index/>", () => {
   test("snapshot to component <Index/>", () => {

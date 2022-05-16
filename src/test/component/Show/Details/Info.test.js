@@ -1,13 +1,13 @@
 import { Provider } from "react-redux";
 import { render } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
-import { store } from "../../../redux/store";
-import { TYPES } from "../../../redux/types";
-import data_user from "../../../data_user.json";
-import data from "../../../data.json";
-import { Photos } from "../../../components/Details/Photos";
+import { store } from "../../../../redux/store";
+import { TYPES } from "../../../../redux/types";
+import data_user from "../../../../data/data_user.json";
+import data from "../../../../data/data.json";
+import { Info } from "../../../../components/Show/Details/Info";
 
-describe("testing to component <Photos/>", () => {
+describe("testing to component <Info/>", () => {
   test("snapshot to component", () => {
     store.dispatch({
       type: TYPES.LOAD,
@@ -17,7 +17,7 @@ describe("testing to component <Photos/>", () => {
     const wrapper = render(
       <MemoryRouter>
         <Provider store={store}>
-          <Photos photos={data_user.photos} />
+          <Info friend={data_user} />
         </Provider>
       </MemoryRouter>
     );

@@ -1,17 +1,18 @@
 import React from "react";
-import { List } from "../../components/List";
+import { List } from "../../../components/Home/List";
 import { mount, shallow } from "enzyme";
 import { Provider } from "react-redux";
-import { store } from "../../redux/store";
-import { TYPES } from "../../redux/types";
+import { store } from "../../../redux/store";
+import { TYPES } from "../../../redux/types";
 import { MemoryRouter } from "react-router-dom";
+import data from "../../../data/data.json";
 
 describe("testing component <List/>", () => {
   test("snapshot to component <List/>", () => {
     const wrapper = shallow(
       <MemoryRouter>
         <Provider store={store}>
-          <List />
+          <List friends={data} />
         </Provider>
       </MemoryRouter>
     );
@@ -38,7 +39,7 @@ describe("testing component <List/>", () => {
     const wrapper = mount(
       <MemoryRouter>
         <Provider store={store}>
-          <List />
+          <List friends={data} />
         </Provider>
       </MemoryRouter>
     );
