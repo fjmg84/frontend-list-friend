@@ -10,6 +10,7 @@ import img from "../photo.jpg";
 
 export const Show = () => {
   let { id } = useParams();
+  console.log(`id: ${id}`);
   const dispatch = useDispatch();
   const { status, msg, classAlert } = useSelector(
     (state) => state.alertsReducer
@@ -17,7 +18,9 @@ export const Show = () => {
   const friends = useSelector((state) => state.friendsReducer);
   const [view, setView] = useState(true);
   const [friend, setFriend] = useState({});
-  const [statusOfFriend, setStatusOfFriend] = useState({});
+  const [statusOfFriend, setStatusOfFriend] = useState(() => {
+    return friends.filter((friend) => friend.id === +id)[0];
+  });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,9 +38,9 @@ export const Show = () => {
       });
   }, [id, dispatch]);
 
-  useEffect(() => {
-    setStatusOfFriend(friends.filter((friend) => friend.id === +id)[0]);
-  }, [id, friends]);
+  /* useEffect(() => {
+    setStatusOfFriend();
+  }, [id, friends]); */
 
   const handleView = () => {
     setView(!view);

@@ -7,9 +7,10 @@ import { List } from "./List";
 
 export const Index = () => {
   const dispatch = useDispatch();
-  const { friendsReducer, alertsReducer } = useSelector((state) => state);
-  const friends = friendsReducer || [];
-  const { status, msg, classAlert } = alertsReducer || {};
+  const { status, msg, classAlert } = useSelector(
+    (state) => state.alertsReducer
+  );
+  const friends = useSelector((state) => state.friendsReducer);
 
   useEffect(() => {
     dispatch(setAlert(true, "Loading friends...", "loading"));

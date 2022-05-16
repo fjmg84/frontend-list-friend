@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing to component <Info/> snapshot to component 1`] = `
+Array [
+  <div
+    class="article col"
+  >
+    <p
+      class="details-title"
+    >
+      Bio:
+    </p>
+    <div
+      class="details-text"
+    >
+      I'm very choosy. I'm also very suspicious, very irrational and I have a very short temper. I'm also extremely jealous and slow to forgive. Just so you know.
+    </div>
+  </div>,
+  <div
+    class="divider"
+  />,
+  <div
+    class="article row"
+  >
+    <p
+      class="details-title"
+    >
+      Phone:
+    </p>
+    <div
+      class="details-text"
+    >
+      (820) 289-1818
+    </div>
+  </div>,
+  <div
+    class="divider"
+  />,
+  <div>
+    <div
+      class="article row"
+    >
+      <p
+        class="details-title"
+      >
+        Address
+      </p>
+      <div
+        class="details-text"
+      >
+        5190 Center Court Drive
+      </div>
+    </div>
+    <div
+      class="article row"
+    >
+      <p
+        class="details-title"
+      >
+        City
+      </p>
+      <div
+        class="details-text"
+      >
+        Spring
+      </div>
+    </div>
+    <div
+      class="article row"
+    >
+      <p
+        class="details-title"
+      >
+        Zipcode
+      </p>
+      <div
+        class="details-text"
+      >
+        77370
+      </div>
+    </div>
+    <div
+      class="article row"
+    >
+      <p
+        class="details-title"
+      >
+        State
+      </p>
+      <div
+        class="details-text"
+      >
+        TX
+      </div>
+    </div>
+  </div>,
+]
+`;

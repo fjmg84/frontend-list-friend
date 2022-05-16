@@ -1,21 +1,30 @@
 import React from "react";
 import { act } from "react-dom/test-utils";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { mount, render, shallow } from "enzyme";
 
 import { Show } from "../../components/Show";
 import { store } from "../../redux/store";
 import { TYPES } from "../../redux/types";
-import data_user from "../../data_user.json";
+import { findOneFriend } from "../../redux/actions/friends";
 import data from "../../data.json";
+import data_user from "../../data_user.json";
+jest.mock("../../redux/actions/friends");
 
 describe("testing component <Show/>", () => {
-  test("snapshot to component <Show/>", () => {
-    const wrapper = shallow(
-      <MemoryRouter>
+  test("snapshot to component", () => {
+    store.dispatch({
+      type: TYPES.LOAD,
+      payload: data,
+    });
+
+    const wrapper = render(
+      <MemoryRouter initialEntries={["/show/1"]}>
         <Provider store={store}>
-          <Show />
+          <Routes>
+            <Route path="/show/:id" element={<Show />}></Route>
+          </Routes>
         </Provider>
       </MemoryRouter>
     );
@@ -43,16 +52,4 @@ describe("testing component <Show/>", () => {
       expect(wrapper.find(".loading").text()).toEqual("Testing to component");
     });
   });
-
-  /* test("show data in component", async () => {
-    const wrapper = render(
-      <MemoryRouter>
-        <Provider store={store}>
-          <Show />
-        </Provider>
-      </MemoryRouter>
-    );
-
-    console.log(store.getState());
-  }); */
 });

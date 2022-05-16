@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { MdClear } from "react-icons/md";
+import PropTypes from "prop-types";
 
 export const Photos = ({ photos = [] }) => {
-  console.log(photos);
   const [modal, setModal] = useState({
     view: false,
     url: undefined,
@@ -48,4 +48,12 @@ export const Photos = ({ photos = [] }) => {
       )}
     </>
   );
+};
+
+Photos.protoTypes = {
+  photos: PropTypes.array,
+};
+
+Photos.propTypes = {
+  photos: PropTypes.array.isRequired,
 };

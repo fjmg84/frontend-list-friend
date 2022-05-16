@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing to component <Photos/> snapshot to component 1`] = `
+<div
+  class="article"
+>
+  <div
+    class="gallery"
+  >
+    <button>
+      <img
+        alt="/static/media/photo_1.65b44377ca3ba76ac460.jpg"
+        src="/static/media/photo_1.65b44377ca3ba76ac460.jpg"
+      />
+    </button>
+    <button>
+      <img
+        alt="/static/media/photo_2.f94104513f3ac56066cc.jpg"
+        src="/static/media/photo_2.f94104513f3ac56066cc.jpg"
+      />
+    </button>
+    <button>
+      <img
+        alt="/static/media/photo_3.a617d38fcaf25508172f.jpg"
+        src="/static/media/photo_3.a617d38fcaf25508172f.jpg"
+      />
+    </button>
+  </div>
+</div>
+`;

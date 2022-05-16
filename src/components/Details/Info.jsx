@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const Info = ({ friend = {} }) => {
   return (
@@ -38,4 +39,12 @@ export const Info = ({ friend = {} }) => {
       </div>
     </>
   );
+};
+
+Info.protoTypes = {
+  friend: PropTypes.object,
+};
+
+Info.propTypes = {
+  friend: PropTypes.object.isRequired,
 };

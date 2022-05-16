@@ -1,51 +1,193 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing component <Show/> snapshot to component <Show/> 1`] = `
-<Router
-  location={
-    Object {
-      "hash": "",
-      "key": "5x9zsih8",
-      "pathname": "/",
-      "search": "",
-      "state": null,
-    }
-  }
-  navigationType="POP"
-  navigator={
-    Object {
-      "action": "POP",
-      "back": [Function],
-      "block": [Function],
-      "createHref": [Function],
-      "forward": [Function],
-      "go": [Function],
-      "index": 0,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "key": "5x9zsih8",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      },
-      "push": [Function],
-      "replace": [Function],
-    }
-  }
+exports[`testing component <Show/> snapshot to component 1`] = `
+<div
+  class="box"
 >
-  <Provider
-    store={
-      Object {
-        "@@observable": [Function],
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      }
-    }
+  <div
+    class="icons icons-blue arrow"
   >
-    <Show />
-  </Provider>
-</Router>
+    <span
+      class="fill vector"
+    >
+      <svg
+        fill="currentColor"
+        height="24"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    class="body"
+  >
+    <div
+      class="header"
+    >
+      <h1>
+        Friend
+      </h1>
+    </div>
+    <div
+      class="main"
+    >
+      <div
+        class="show-card"
+      >
+        <div
+          class="show-card-img"
+        >
+          <img
+            class="medium"
+            src="photo.jpg"
+          />
+          <span
+            class="availability eclipse available"
+          />
+        </div>
+        <div
+          class="show-card-content"
+        >
+          <p
+            class="details-name"
+          >
+            undefined undefined
+          </p>
+          <div
+            class="show-card-header-status"
+          >
+            <span
+              class="details-status"
+            >
+              At work...
+            </span>
+          </div>
+          <div
+            class="show-card-box-data"
+          >
+            <div
+              class="nav"
+            >
+              <div
+                class="tab active"
+              >
+                <span>
+                  Info
+                </span>
+                <span
+                  class="line"
+                />
+              </div>
+              <div
+                class="tab inactive"
+              >
+                <span>
+                  Photos
+                </span>
+                <span
+                  class=""
+                />
+              </div>
+            </div>
+            <div
+              class="section"
+            >
+              <div
+                class="article col"
+              >
+                <p
+                  class="details-title"
+                >
+                  Bio:
+                </p>
+                <div
+                  class="details-text"
+                />
+              </div>
+              <div
+                class="divider"
+              />
+              <div
+                class="article row"
+              >
+                <p
+                  class="details-title"
+                >
+                  Phone:
+                </p>
+                <div
+                  class="details-text"
+                />
+              </div>
+              <div
+                class="divider"
+              />
+              <div>
+                <div
+                  class="article row"
+                >
+                  <p
+                    class="details-title"
+                  >
+                    Address
+                  </p>
+                  <div
+                    class="details-text"
+                  />
+                </div>
+                <div
+                  class="article row"
+                >
+                  <p
+                    class="details-title"
+                  >
+                    City
+                  </p>
+                  <div
+                    class="details-text"
+                  />
+                </div>
+                <div
+                  class="article row"
+                >
+                  <p
+                    class="details-title"
+                  >
+                    Zipcode
+                  </p>
+                  <div
+                    class="details-text"
+                  />
+                </div>
+                <div
+                  class="article row"
+                >
+                  <p
+                    class="details-title"
+                  >
+                    State
+                  </p>
+                  <div
+                    class="details-text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

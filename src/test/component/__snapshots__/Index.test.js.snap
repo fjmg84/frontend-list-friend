@@ -35,19 +35,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Jeremy Davis
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   At work...
                 </span>
               </div>
@@ -81,19 +85,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Vlad Baratovich
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   Hangout out by the pool
                 </span>
               </div>
@@ -126,19 +134,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Reese Samsonite
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   At NG-conf!
                 </span>
               </div>
@@ -171,19 +183,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Edwardo Gonzalez
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   Developing something amazing
                 </span>
               </div>
@@ -217,19 +233,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Jim Denison
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   Designing beatiful things
                 </span>
               </div>
@@ -263,19 +283,23 @@ exports[`testing component <Index/> snapshot to component <Index/> 1`] = `
               />
             </div>
             <div
-              class="card-header "
+              class="card-header"
             >
               <div
                 class="card-header-name"
               >
-                <span>
+                <p
+                  class="details-name"
+                >
                   Steph Walters
-                </span>
+                </p>
               </div>
               <div
                 class="card-header-status"
               >
-                <span>
+                <span
+                  class="details-status"
+                >
                   Developing something amazing
                 </span>
               </div>
