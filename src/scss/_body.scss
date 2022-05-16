@@ -1,5 +1,16 @@
+.body {
+  font-family: "Inter";
+  font-style: normal;
+  flex-grow: 1;
+  background-color: $colorWhite;
+  padding: 5%;
+  margin: 2% 10%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  height: 100%;
+}
+
 .box {
-  /* background-color: #ef4444; */
   display: flex;
   justify-content: flex-start;
   flex-flow: column grow;
@@ -7,33 +18,15 @@
   height: 100%;
 }
 
-.body {
-  flex-grow: 1;
-  background-color: #fff;
-  padding: 5%;
-  margin: 2% 10%;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  height: 100%;
-
-  & h1 {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 24px;
-    color: #b1b9db;
-  }
-}
 .error {
   text-align: center;
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #ef4444;
+  background-color: $colorError;
   width: 400px;
   border-radius: 121px;
-  color: white;
+  color: $colorWhite;
 }
 
 .loading {
@@ -41,10 +34,10 @@
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgb(241 245 249);
+  background-color: $colorBg;
   width: 400px;
   border-radius: 121px;
-  color: #000;
+  color: $colorBlack;
 }
 
 @media screen and (max-width: 768px) {

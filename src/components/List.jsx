@@ -21,12 +21,12 @@ export const List = ({ friends }) => {
                 ></span>
               </div>
 
-              <div className="card-header ">
+              <div className="card-header">
                 <div className="card-header-name">
-                  <span>{`${friend.first_name} ${friend.last_name}`}</span>
+                  <p className="details-name">{`${friend.first_name} ${friend.last_name}`}</p>
                 </div>
                 <div className="card-header-status">
-                  <span>{friend.status}</span>
+                  <span className="details-status">{friend.status}</span>
                 </div>
               </div>
 

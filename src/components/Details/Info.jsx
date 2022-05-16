@@ -4,36 +4,36 @@ export const Info = ({ friend = {} }) => {
   return (
     <>
       <div className="article col">
-        <p className="title">Bio:</p>
-        <div className="text">{friend.bio}</div>
+        <p className="details-title">Bio:</p>
+        <div className="details-text">{friend.bio}</div>
       </div>
       <div className="divider"></div>
 
       <div className="article row">
-        <p className="title">Phone:</p>
-        <div className="">{friend.phone}</div>
+        <p className="details-title">Phone:</p>
+        <div className="details-text">{friend.phone}</div>
       </div>
       <div className="divider"></div>
 
       <div>
         <div className="article row">
-          <p className="title">Address</p>
-          <div>{friend.address_1}</div>
+          <p className="details-title">Address</p>
+          <div className="details-text">{friend.address_1}</div>
         </div>
 
         <div className="article row">
-          <p className="title">City</p>
-          <div>{friend.city}</div>
+          <p className="details-title">City</p>
+          <div className="details-text">{friend.city}</div>
         </div>
 
         <div className="article row">
-          <p className="title">Zipcode</p>
-          <div>{friend.zipcode}</div>
+          <p className="details-title">Zipcode</p>
+          <div className="details-text">{friend.zipcode}</div>
         </div>
 
         <div className="article row">
-          <p className="title">State</p>
-          <div>{friend.state}</div>
+          <p className="details-title">State</p>
+          <div className="details-text">{friend.state}</div>
         </div>
       </div>
     </>

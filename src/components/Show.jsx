@@ -69,18 +69,18 @@ export const Show = () => {
             </div>
 
             <div className="show-card-content">
-              <p>{`${friend.first_name} ${friend?.last_name}`}</p>
+              <p className="details-name">{`${friend.first_name} ${friend?.last_name}`}</p>
               <div className="show-card-header-status">
-                <span>{statusOfFriend?.status}</span>
+                <span className="details-status">{statusOfFriend?.status}</span>
               </div>
 
               <div className="show-card-box-data">
                 <div className="nav">
-                  <div className={`tab1 ${view ? "active" : "inactive"}`}>
+                  <div className={`tab ${view ? "active" : "inactive"}`}>
                     <span onClick={() => handleView()}>Info</span>
                     <span className={`${view ? "line" : ""}`}></span>
                   </div>
-                  <div className={`tab2 ${!view ? "active" : "inactive"}`}>
+                  <div className={`tab ${!view ? "active" : "inactive"}`}>
                     <span onClick={() => handleView()}>Photos</span>
                     <span className={`${!view ? "line" : ""}`}></span>
                   </div>

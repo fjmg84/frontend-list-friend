@@ -1,0 +1,40 @@
+h1 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 24px;
+  color: $colorTitle;
+}
+
+.details-name {
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorBlack;
+}
+
+.details-status {
+  font-weight: bolder;
+  font-size: 12px;
+  line-height: 24px;
+  align-items: center;
+  color: $colorTitle;
+}
+
+.details-text {
+  width: 432px;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorBlack;
+}
+
+.details-title {
+  width: 187px;
+  height: 24px;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: $colorTitle;
+}
