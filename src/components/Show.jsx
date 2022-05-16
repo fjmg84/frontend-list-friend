@@ -24,23 +24,23 @@ export const Show = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(setAlert(true, "Loading...", "loading"));
     findOneFriend(id)
       .then((friend) => {
+        console.log(friend);
         setFriend(friend);
         dispatch(setAlert(false, undefined));
       })
       .catch((err) => {
         console.error(err);
         dispatch(
-          setAlert(true, "Up!!! Sorry. Not Found data of this friend.", "error")
+          setAlert(
+            true,
+            "Up!!! Sorry. Not Found Data For This Friend :(.",
+            "error"
+          )
         );
       });
   }, [id, dispatch]);
-
-  /* useEffect(() => {
-    setStatusOfFriend();
-  }, [id, friends]); */
 
   const handleView = () => {
     setView(!view);

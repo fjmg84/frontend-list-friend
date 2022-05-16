@@ -10,7 +10,7 @@ export const Index = () => {
   const { status, msg, classAlert } = useSelector(
     (state) => state.alertsReducer
   );
-  const friends = useSelector((state) => state.friendsReducer);
+  const friends = useSelector((state) => state.friendsReducer) || [];
 
   useEffect(() => {
     dispatch(setAlert(true, "Loading friends...", "loading"));
@@ -21,7 +21,9 @@ export const Index = () => {
       })
       .catch((err) => {
         console.log(err);
-        dispatch(setAlert(true, "Up!! Sorry. Not loading Friends :(", "error"));
+        dispatch(
+          setAlert(true, "Up!!! Sorry Not Found List Of Friends :(", "error")
+        );
       });
   }, [dispatch]);
 

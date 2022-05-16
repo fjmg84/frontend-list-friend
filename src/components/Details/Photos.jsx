@@ -53,7 +53,3 @@ export const Photos = ({ photos = [] }) => {
 Photos.protoTypes = {
   photos: PropTypes.array,
 };
-
-Photos.propTypes = {
-  photos: PropTypes.array.isRequired,
-};

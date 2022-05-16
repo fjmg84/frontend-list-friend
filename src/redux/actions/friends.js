@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import data from "../../data.json";
+/* import data_list from "../../data.json";*/
 import data_user from "../../data_user.json";
 
 export const getFriends = async () => {
@@ -13,5 +13,7 @@ export const getFriends = async () => {
 export const findOneFriend = async (id) => {
   let url = "https://private-5bdb3-friendmock.apiary-mock.com/friends/id";
   const { data } = await axios.get(url);
-  return data_user;
+  //This is only necessary for manager photos
+  data.photos = data_user.photos;
+  return data;
 };
