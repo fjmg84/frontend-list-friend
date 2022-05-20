@@ -21,11 +21,10 @@ export const Show = () => {
 	const [friend, setFriend] = useState({})
 	const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
 
-	console.log(friend)
-
 	const navigate = useNavigate()
 
 	useEffect(() => {
+		dispatch(setAlert(true, 'Loading...', 'loading'))
 		findOneFriend(id)
 			.then((friend) => {
 				setFriend(friend)

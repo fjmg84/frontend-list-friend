@@ -16,9 +16,13 @@ export const getFriends = async () => {
 }
 
 export const findOneFriend = async (id) => {
-	let url = 'https://private-5bdb3-friendmock.apiary-mock.com/friends/id'
-	const { data } = await axios.get(url)
-	//This is only necessary for manager photos
-	data.photos = photos
-	return data
+	const data = JSON.parse(sessionStorage.getItem('friend_details'))
+	if (!data) {
+		let url = 'https://private-5bdb3-friendmock.apiary-mock.com/friends/id'
+		const { data } = await axios.get(url)
+		//This is only necessary for manager photos
+		data.photos = photos
+		window.sessionStorage.setItem('friend_details', JSON.stringify(data))
+		return data
+	} else return data
 }
