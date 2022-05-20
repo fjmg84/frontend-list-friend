@@ -5,10 +5,14 @@ import axios from 'axios'
 import { photos } from '../../images/index'
 
 export const getFriends = async () => {
-	let url = 'http://private-5bdb3-friendmock.apiary-mock.com/friends'
-	const { data } = await axios.get(url)
-	window.sessionStorage.setItem('friends', JSON.stringify(data))
-	return data
+	const data = JSON.parse(window.sessionStorage.getItem('friends'))
+
+	if (!data) {
+		let url = 'http://private-5bdb3-friendmock.apiary-mock.com/friends'
+		const { data } = await axios.get(url)
+		window.sessionStorage.setItem('friends', JSON.stringify(data))
+		return data
+	} else return data
 }
 
 export const findOneFriend = async (id) => {

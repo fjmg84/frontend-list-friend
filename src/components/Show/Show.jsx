@@ -7,6 +7,7 @@ import { setAlert } from '../../redux/actions/alerts'
 import { Info } from './Details/Info'
 import { Photos } from './Details/Photos'
 import { avatar } from '../../images/index'
+import { Spinner } from '../Helps/Spinner'
 
 export const Show = () => {
 	let { id } = useParams()
@@ -19,6 +20,8 @@ export const Show = () => {
 	const [view, setView] = useState(true)
 	const [friend, setFriend] = useState({})
 	const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
+
+	console.log(friend)
 
 	const navigate = useNavigate()
 
@@ -55,40 +58,46 @@ export const Show = () => {
 				</div>
 
 				<div className="main">
-					<div className="show-card">
-						<div className="show-card-img">
-							<img src={avatar} alt={friend.img} className="medium" />
-							<span className="availability eclipse available"></span>
-						</div>
-
-						<div className="show-card-content">
-							<p className="details-name">{`${friend.first_name} ${friend?.last_name}`}</p>
-							<div className="show-card-header-status">
-								<span className="details-status">{statusOfFriend?.status}</span>
+					{friend?.first_name ? (
+						<div className="show-card">
+							<div className="show-card-img">
+								<img src={avatar} alt={friend.img} className="medium" />
+								<span className="availability eclipse available"></span>
 							</div>
 
-							<div className="show-card-box-data">
-								<div className="nav">
-									<div className={`tab ${view ? 'active' : 'inactive'}`}>
-										<span onClick={() => setView(!view)}>Info</span>
-										<span className={`${view ? 'line' : ''}`}></span>
-									</div>
-									<div className={`tab ${!view ? 'active' : 'inactive'}`}>
-										<span onClick={() => setView(!view)}>Photos</span>
-										<span className={`${!view ? 'line' : ''}`}></span>
-									</div>
+							<div className="show-card-content">
+								<p className="details-name">{`${friend.first_name} ${friend?.last_name}`}</p>
+								<div className="show-card-header-status">
+									<span className="details-status">
+										{statusOfFriend?.status}
+									</span>
 								</div>
 
-								<div className="section">
-									{view ? (
-										<Info friend={friend} />
-									) : (
-										<Photos photos={friend.photos} />
-									)}
+								<div className="show-card-box-data">
+									<div className="nav">
+										<div className={`tab ${view ? 'active' : 'inactive'}`}>
+											<span onClick={() => setView(!view)}>Info</span>
+											<span className={`${view ? 'line' : ''}`}></span>
+										</div>
+										<div className={`tab ${!view ? 'active' : 'inactive'}`}>
+											<span onClick={() => setView(!view)}>Photos</span>
+											<span className={`${!view ? 'line' : ''}`}></span>
+										</div>
+									</div>
+
+									<div className="section">
+										{view ? (
+											<Info friend={friend} />
+										) : (
+											<Photos photos={friend.photos} />
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					) : (
+						<Spinner />
+					)}
 				</div>
 			</div>
 		</div>
