@@ -18,7 +18,7 @@ export const Show = () => {
 	const friends = useSelector((state) => state.friendsReducer)
 	const [view, setView] = useState(true)
 	const [friend, setFriend] = useState({})
-	const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
+	//const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
 
 	const navigate = useNavigate()
 
