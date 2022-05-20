@@ -6,7 +6,7 @@ import { findOneFriend } from '../../redux/actions/friends'
 import { setAlert } from '../../redux/actions/alerts'
 import { Info } from './Details/Info'
 import { Photos } from './Details/Photos'
-import img from '../../images/photo.jpg'
+import { avatar } from '../../images/index'
 
 export const Show = () => {
 	let { id } = useParams()
@@ -18,7 +18,7 @@ export const Show = () => {
 	const friends = useSelector((state) => state.friendsReducer)
 	const [view, setView] = useState(true)
 	const [friend, setFriend] = useState({})
-	//const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
+	const statusOfFriend = friends.filter((friend) => friend.id === +id)[0]
 
 	const navigate = useNavigate()
 
@@ -57,7 +57,7 @@ export const Show = () => {
 				<div className="main">
 					<div className="show-card">
 						<div className="show-card-img">
-							<img src={img} alt={friend.img} className="medium" />
+							<img src={avatar} alt={friend.img} className="medium" />
 							<span className="availability eclipse available"></span>
 						</div>
 
