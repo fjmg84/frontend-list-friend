@@ -5,7 +5,7 @@ exports[`testing component <List/> snapshot to component <List/> 1`] = `
   location={
     Object {
       "hash": "",
-      "key": "2eg0vili",
+      "key": "atn5iiyn",
       "pathname": "/",
       "search": "",
       "state": null,
@@ -24,7 +24,7 @@ exports[`testing component <List/> snapshot to component <List/> 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "2eg0vili",
+        "key": "atn5iiyn",
         "pathname": "/",
         "search": "",
         "state": null,
